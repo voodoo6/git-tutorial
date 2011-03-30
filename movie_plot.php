@@ -4,7 +4,12 @@ class MoviePlotGenerator {
 									  'diminuitive',
 									  'fat',
 									  'determined',
+<<<<<<< HEAD
 									  'grisly');
+=======
+									  'girsly',
+									  'committed');
+>>>>>>> more_content
 						
 	public static $occupations = array('movie-critic',
 									   'goat wrangler',
@@ -14,7 +19,8 @@ class MoviePlotGenerator {
 									   'archaeologist',
 									   'investment banker',
 									   'baker',
-									   'swimsuit model');
+									   'swimsuit model',
+									   'mercenary');
 						 
 	public static $quirks = array('penchant for melodrama',
 								  'murky past',
@@ -24,7 +30,8 @@ class MoviePlotGenerator {
 								  'background in Kung Fu',
 								  'baby on the way',
 								  '57\' Chevy',
-								  'family back in Mexico');
+								  'family back in Mexico',
+								  'sordid past');
 					
 	/**
 	 *
@@ -44,7 +51,7 @@ class MoviePlotGenerator {
 		
 		$plot  = "He's a $his_adjective $his_occupation with a $his_quirk. ";
 		$plot .= "She's a $her_adjective $her_occupation with a $her_quirk. ";
-		$plot .= "They fight crime.";
+		$plot .= "Together, they fight crime.";
 		return $plot;
 	}
 	
@@ -57,7 +64,7 @@ class MoviePlotGenerator {
 	 */	
 	protected function getRandom($arr)
 	{
-		return $arr[rand(0, count($arr) - 1)];
+		return $arr[mt_rand(0, count($arr) - 1)];
 	}
 		
 }
